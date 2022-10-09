@@ -1,32 +1,30 @@
-const loginForm = document.querySelector("#loginForm");
-const id = document.querySelector(".id");
-const pw = document.querySelector(".pw");
-const HelloUser = document.querySelector("#HelloUser");
 
-const HIDDEN_CLASS = "hidden";
-const USERNAME_KEY = "userName";
-const USERPASS_KEY = "password";
+const loginForm = document.querySelector("#loginForm")
+const loginInput = document.querySelector("#loginForm input");
+const greeding = document.querySelector("#greeding");
 
 
-function onLoginSubmit(event){
-    event.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASS);
-    localStorage.setItem(USERNAME_KEY, id.value);
-    localStorage.setItem(USERPASS_KEY, pw.value)
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+   event.preventDefault();
+   loginForm.classList.add(HIDDEN_CLASSNAME);
+   localStorage.setItem(USERNAME_KEY, loginInput.value);
+   paintGreeding();
 }
 
-function paintGreeding(){
-    const username = localStorage.getItem(USERNAME_KEY);
-    HelloUser.innerText = `Hello ${username}`;
-    HelloUser.classList.remove(HIDDEN_CLASS);
+function paintGreeding(){  
+   const username = localStorage.getItem(USERNAME_KEY);
+   greeding.innerText = `Hello ${username}`;
+   greeding.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);
-const saveUserpass = localStorage.getItem(USERPASS_KEY);
 
-if (saveUsername, saveUserpass === null) {
-    loginForm.classList.remove(HIDDEN_CLASS);
-    loginForm.addEventListener("submit", onLoginSubmit);
+if (saveUsername === null) {
+   loginForm.classList.remove(HIDDEN_CLASSNAME);
+   loginForm.addEventListener("submit", onLoginSubmit)
 } else {
-    paintGreeding();
+   paintGreeding();
 }
