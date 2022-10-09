@@ -9,7 +9,8 @@ const image = [
 
 const randImg = image[Math.floor(Math.random()*image.length)];
 
-const bgImg = document.createElement("img");
-bgImg.src = `img/${randImg}`;
+const bgImg = `url('img/${randImg}')`;
 
-document.body.appendChild(bgImg);
+document.body.style.backgroundImage= bgImg;
+
+// document.body.appendChild(bgImg);
