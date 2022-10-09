@@ -14,9 +14,85 @@ body {
     z-index: 99;    
 }
 
+.hidden {
+    display: none;
+}
+
+#loginBox {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(101, 101, 101, 0.4);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 30px;
+    box-sizing: border-box;
+
+}
+
+#todoBox {
+    cursor: pointer;
+}
+
+#todoList {
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    margin-left: 30px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px rgba(101, 101, 101, 0.4);
+}
+
+#todoList button {
+    float: right;
+    margin-right: 6px;
+    border: none;
+    background-color: slateblue;
+    border-radius: 4px;
+    color: white;
+}
+
+
+#todoList li {
+    clear: both;
+}
+
+#todotxt {
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.id, .pw {
+    height: 20px;
+    width: 150px;
+    padding-left: 4px;
+}
+
 
 #clockBox {   
-    text-align:center; 
-    margin-top:23%;
-    z-index: 98;
+    text-align:center;
+    color: white;
+    font-weight: 800;
+    height: 50%;
+}
+
+#clock {
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+}
+#today {
+    font-size: 2rem;
+}
+
+
+#weather {
+    color: white;
+    float: right;
+    margin-right: 30px;
+    font-weight: 800;
 }

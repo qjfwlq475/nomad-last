@@ -8,12 +8,42 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <header>
+    <div id="loginBox">
+        <div id="todoBox">
+            <span>TODO</span>
+        </div>
+        <form id="loginForm">
+            <span>ID: </span>
+            <input class="input id" type="text" placeholder="ID">
+            <span>PW: </span><input class="input pw" type="text" placeholder="password">
+            <input class="input sub" type="submit" value="Login">
+        </form>
+        <h2 class="hidden"></h2>
+    </div>
+</header>
 
+    <div id="todoList">
+        <form id="todoForm">
+                <input type="text" id="todotxt" placeholder="할 일을 입력하세요">
+        </form>
+        <ul id="DoDone"> </ul>
+    </div>
 
     <div id="clockBox">
         <h1 id="clock">00:00:00</h1>
-        <h3 id="today">xx xx xx </h3>
+        <span id="today"></span>
     </div>
+
+
+    <footer>
+            
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+
+    </footer>
 
 
     <script src="js/backImg.js"></script>    
